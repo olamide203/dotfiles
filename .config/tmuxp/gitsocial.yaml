@@ -1,0 +1,25 @@
+session_name: gitsocial
+start_directory: ~/workspace/gitsocial
+windows:
+  - window_name: frontend
+    layout: main-vertical
+    options:
+      main-pane-width: 50%
+    start_directory: packages/frontend
+    panes:
+      - nvim .
+      - shell_command:
+        - cmd: pnpm install
+        - cmd: pnpm run dev
+      - pane
+  - window_name: backend
+    layout: main-vertical
+    options:
+      main-pane-width: 50%
+    start_directory: packages/backend
+    panes:
+      - nvim .
+      - shell_command:
+        - cmd: pnpm install
+        - cmd: pnpm run dev
+      - pane
