@@ -1,0 +1,14 @@
+---
+session_name: checkit-website
+start_directory: ~/workspace/checkit/main-website/
+windows:
+  - window_name: frontend
+    layout: main-vertical
+    options:
+      main-pane-width: 50%
+    panes:
+      - nvim .
+      - shell_command:
+          - cmd: npm install
+          - cmd: npm run dev
+      - pane

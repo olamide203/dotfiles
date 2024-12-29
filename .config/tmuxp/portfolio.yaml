@@ -1,0 +1,15 @@
+---
+session_name: checkit
+start_directory: ~/workspace/portfolio/
+windows:
+  - window_name: frontend
+    layout: main-vertical
+    options:
+      main-pane-width: 50%
+    panes:
+      - nvim .
+      - shell_command:
+          - cmd: rm -rf ./.next/
+          - cmd: pnpm install
+          - cmd: pnpm run dev
+      - pane

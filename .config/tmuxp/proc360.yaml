@@ -1,26 +1,26 @@
 ---
-session_name: gitsocial
-start_directory: ~/workspace/gitsocial
+session_name: proc360
+start_directory: ~/workspace/checkit
 windows:
   - window_name: frontend
     layout: main-vertical
     options:
       main-pane-width: 50%
-    start_directory: packages/frontend
+    start_directory: proc360-frontend
     panes:
       - nvim .
       - shell_command:
-          - cmd: pnpm install
-          - cmd: pnpm run dev
+          - cmd: npm install
+          - cmd: npm run dev
       - pane
-  - window_name: backend
+  - window_name: admin
     layout: main-vertical
     options:
       main-pane-width: 50%
-    start_directory: packages/backend
+    start_directory: proc360-admin
     panes:
       - nvim .
       - shell_command:
-          - cmd: pnpm install
-          - cmd: pnpm run dev
+          - cmd: npm install
+          - cmd: npm run dev
       - pane

@@ -1,0 +1,28 @@
+---
+session_name: sqe
+start_directory: ~/workspace/sqe
+windows:
+  - window_name: Website
+    layout: main-vertical
+    options:
+      main-pane-width: 50%
+    start_directory: website/
+    panes:
+      - nvim .
+      - shell_command:
+          - cmd: npm install
+          - cmd: npm run dev:frontend
+      - pane
+  - window_name: REST API
+    layout: main-vertical
+    options:
+      main-pane-width: 50%
+    start_directory: rest_api
+    panes:
+      - shell_command:
+          - cmd: source venv/bin/activate
+          - cmd: nvim .
+      - shell_command:
+          - cmd: source venv/bin/activate
+          - cmd: uvicorn app.main:app --reload
+      - pane

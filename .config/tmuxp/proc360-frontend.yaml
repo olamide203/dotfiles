@@ -1,0 +1,14 @@
+---
+session_name: proc360-frontend
+start_directory: ~/workspace/checkit/proc360-frontend/
+windows:
+  - window_name: frontend
+    layout: main-vertical
+    options:
+      main-pane-width: 50%
+    panes:
+      - nvim .
+      - shell_command:
+          - cmd: npm install
+          - cmd: npm run dev
+      - pane

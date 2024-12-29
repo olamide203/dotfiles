@@ -1,6 +1,6 @@
 ---
-session_name: gitsocial
-start_directory: ~/workspace/gitsocial
+session_name: sakura
+start_directory: ~/workspace/sakura
 windows:
   - window_name: frontend
     layout: main-vertical
@@ -13,11 +13,11 @@ windows:
           - cmd: pnpm install
           - cmd: pnpm run dev
       - pane
-  - window_name: backend
+  - window_name: cms
     layout: main-vertical
     options:
       main-pane-width: 50%
-    start_directory: packages/backend
+    start_directory: packages/cms
     panes:
       - nvim .
       - shell_command:
